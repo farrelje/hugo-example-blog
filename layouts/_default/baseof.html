@@ -1,0 +1,21 @@
+<!-- This is the base template for all pages. Use "block" here  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {{ partial "head.html" }}
+</head>
+<body>
+    <div class="page-wrapper">
+        {{ partial "nav.html" }}
+
+        <main class="main-content">
+            {{ block "main" . }}
+                {{ .Content }}
+            {{ end}}
+        </main>
+
+        {{ partial "footer.html" }}
+    </div>
+</body>
+</html>
+
