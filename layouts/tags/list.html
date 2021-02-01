@@ -1,0 +1,17 @@
+{{ define "main" }}
+
+<div>
+    <h1 class="page-title">List posts by tag taxonomy</h1>
+    {{ range $key, $taxonomy := .Site.Taxonomies.tags }}
+    <p> {{ $key }} </p>
+    <ul>
+        {{ range $taxonomy.Pages }}
+            <li>
+                <a href="{{ .Permalink}}"> {{ .LinkTitle }} </a>
+            </li>
+        {{ end }}
+    </ul>
+    {{ end }}
+</div>
+
+{{ end }}

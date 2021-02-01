@@ -2,7 +2,7 @@
 title: "Second Post"
 date: 2021-02-01T16:07:22+13:00
 draft: true
-tags: []
+tags: ["Shared", "Third"]
 category: "Second"
 ---
 
