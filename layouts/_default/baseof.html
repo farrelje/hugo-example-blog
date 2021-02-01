@@ -5,15 +5,17 @@
     {{ partial "head.html" }}
 </head>
 <body>
-    <div class="page-wrapper">
+    <div class="page-content">
         {{ partial "nav.html" }}
 
         <main class="main-content">
             {{ block "main" . }}
-                {{ .Content }}
+                <div class="container">
+                    {{ .Content }}
+                </div>
             {{ end}}
         </main>
-
+    
         {{ partial "footer.html" }}
     </div>
 </body>
