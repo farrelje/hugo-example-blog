@@ -92,11 +92,10 @@ footer {
 
 .answer {
     color: var(--dark-grey);
-    background-color: #121212;
-    text-align: center;
-    width: 200px;
+    background-color: var(--dark-grey);
+    width: 250px;
 
     &:hover {
-        color: white;
+        color: white;   
     }
 }
