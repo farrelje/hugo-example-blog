@@ -6,6 +6,14 @@
                     <a href="/tags/">{{ . }}</a>
                 {{ end }}
                 {{ .Content }}
+
+                {{ with .Resources.ByType "image" }}
+                    <div class="gallery">
+                        {{ range . }}
+                        <img class="gallery__image" src="{{ .RelPermalink }}">
+                        {{ end }}
+                    </div>
+                {{ end }}
             </div>
     </div>
 {{ end }}
