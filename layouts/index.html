@@ -1,5 +1,31 @@
 {{ define "main"}}
 <!-- This is the index page, using baseof.html. Oddly, use "define" to use a template. -->
+<div>
     <h1 class="page-title">Home page</h1>
+
+    <p>Disable caching each build with --ignoreCache</p>
+    <h2>Trivia categories:</h2> 
+
+    {{ $trivia := getJSON "http://jservice.io/api/random" }}
+    
+    {{ range $trivia }}
+    <p>
+        {{ .question }}
+    </p>
+
+    <p>
+        {{ .answer }}
+    </p>
+
+    {{ end }}
+    <h2>Dad jokes</h2>
+
+        Dad joke: {{ $joke := getJSON "https://icanhazdadjoke.com/" }}
+
+        {{ $joke.joke }}
+
+   
+</div>
+
 {{ end }}
 
