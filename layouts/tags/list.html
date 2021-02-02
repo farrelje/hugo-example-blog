@@ -1,7 +1,8 @@
 {{ define "main" }}
 
 <div>
-    <h1 class="page-title">List posts by tag taxonomy</h1>
+    <h1 class="page-title">All posts by tag</h1>
+    <p>(Not greatly useful. For future, if possible, would be nice to navigate content by tag.)</p>
     {{ range $key, $taxonomy := .Site.Taxonomies.tags }}
     <p> {{ $key }} </p>
     <ul>

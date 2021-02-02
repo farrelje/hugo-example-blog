@@ -2,6 +2,9 @@
     <div class="container">
         <h1 class="page-title">{{ .Title }}</h1>
             <div class="post-container">
+                {{ range .Params.tags }}
+                    <a href="/tags/">{{ . }}</a>
+                {{ end }}
                 {{ .Content }}
             </div>
     </div>
