@@ -1,29 +1,32 @@
 {{ define "main"}}
 <!-- This is the index page, using baseof.html. Oddly, use "define" to use a template. -->
 <div>
-    <h1 class="page-title">Home page</h1>
+    <h1 class="page-title">Welcome to my amazing Hugo blog</h1>
 
-    <p>Disable caching each build with --ignoreCache</p>
-    <h2>Trivia categories:</h2> 
+    <h3>Random API calls with Hugo</h3>
 
-    {{ $trivia := getJSON "http://jservice.io/api/random" }}
-    
-    {{ range $trivia }}
-    <p>
-        {{ .question }}
-    </p>
+    <p>To reload a new API call, disable caching in each build with <code>--ignoreCache</code>.</p>
 
-    <p>
-        {{ .answer }}
-    </p>
+    <div class="api-block">
+        <h2>> Daily trivia</h2> 
 
-    {{ end }}
-    <h2>Dad jokes</h2>
+        {{ $trivia := getJSON "http://jservice.io/api/random" }}
+        
+        {{ range $trivia }}
+        <p>{{ .question }}</p>
+        <br>
+        <p class="answer">{{ .answer }}</p>
+        {{ end }}
 
-        Dad joke: {{ $joke := getJSON "https://icanhazdadjoke.com/" }}
+    </div> 
+
+    <div class="api-block">
+        <h2>> Dad jokes</h2>
+
+        {{ $joke := getJSON "https://icanhazdadjoke.com/" }}
 
         {{ $joke.joke }}
-
+    </div>
    
 </div>
 

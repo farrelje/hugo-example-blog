@@ -15,6 +15,16 @@ html, body {
     font-family: var(--primary-font);
 }
 
+
+h1,h2,h3,h4,h5,h6 {
+    margin: 20px 0;
+}
+
+.page-title {
+    margin: 40px 0;
+    text-align: center;
+}
+
 a {
     text-decoration: none;
 
@@ -65,15 +75,28 @@ footer {
     max-width: 1440px;
 }
 
-.page-title {
-    margin: 20px 0;
-    text-align: center;
-}
+
 
 .post-list {
 
     & li {
         list-style-type: none;
         padding: 5px 0;
+    }
+}
+
+
+.api-block {
+    padding: 20px 0;
+}
+
+.answer {
+    color: var(--dark-grey);
+    background-color: #121212;
+    text-align: center;
+    width: 200px;
+
+    &:hover {
+        color: white;
     }
 }
