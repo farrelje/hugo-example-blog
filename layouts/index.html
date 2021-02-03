@@ -3,6 +3,8 @@
 <div class="container">
     <h1 class="page-title">Welcome to my amazing Hugo blog</h1>
 
+    <p>This is a testbed for mindlessly trying out Hugo's features. No overall plan included, just doing as much as possible for learning.</p>
+
     <h3>Random API calls with Hugo</h3>
 
     <p>To reload a new API call, disable caching in each build with <code>--ignoreCache</code>.</p>
@@ -13,7 +15,7 @@
         {{ $trivia := getJSON "http://jservice.io/api/random" }}
         
         {{ range $trivia }}
-        <p>{{ .question }}</p>
+        <p><strong>Hint:</strong> {{ .question }}</p>
         <br>
         <p>Hover for answer:</p>
         <p class="answer">{{ .answer }}</p>

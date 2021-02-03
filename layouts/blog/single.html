@@ -2,17 +2,26 @@
     <div class="container">
         <h1 class="page-title">{{ .Title }}</h1>
             <div class="post-container">
-                {{ range .Params.tags }}
-                    <a href="/tags/">{{ . }}</a>
+
+                <!-- This is how to pass parameters to a partial. A bit more complicated than Jekyll, but easy enough and powerful -->
+                {{ if .Params.tags }}
+                    {{ partial "tags.html" (dict "context" .Params.tags ) }}
                 {{ end }}
+
                 {{ .Content }}
 
-                {{ with .Resources.ByType "image" }}
+                {{ if (.Params.resources) }}
+
                     <div class="gallery">
-                        {{ range . }}
-                        <img class="gallery__image" src="{{ .RelPermalink }}">
+                        {{ range .Params.resources}}
+                            <img class="gallery__image" src="{{ .src }}">
                         {{ end }}
                     </div>
+                
+                {{ else }}
+
+                    <p>No resources in this article.</p>
+
                 {{ end }}
             </div>
     </div>

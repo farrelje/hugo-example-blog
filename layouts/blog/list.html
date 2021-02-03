@@ -5,6 +5,7 @@
         <ul class="post-list">
             {{ range .Pages.ByPublishDate.Reverse }}
             <li>
+                {{ .Date.Format "2006-01-02" }}
                 <a href="{{ .RelPermalink }}">{{ .Title }}</a>
             </li>
             {{ end }}

@@ -5,7 +5,10 @@ draft: true
 tags: ["Shared", "Second"]
 category: "First"
 resources:
-- src: 
+- src: "./images/abandoned-building.jpg"
+  alt:  "A building with art of Victor Hugo on it"
+- src: "./images/cat-named-hugo.jpg"
+  alt:  "A cat called Hugo"
 ---
 
 

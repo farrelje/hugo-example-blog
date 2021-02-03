@@ -8,6 +8,7 @@
 :root {
     --primary-font: 'Montserrat', sans-serif;
     --dark-grey: #121212;
+    --nice-pink:  #ff7597;
 }
 
 html, body {
@@ -29,8 +30,12 @@ a {
     text-decoration: none;
 
     &:hover {
-        color: #ff7597;
+        color: var(--nice-pink);
     }
+}
+
+p {
+    line-height: 1.5rem;
 }
 
 header {
@@ -72,7 +77,9 @@ footer {
 
 
 .container {
-    max-width: 1440px;
+    max-width: 900px;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 
@@ -103,6 +110,7 @@ footer {
 
 .gallery {
     display: flex;
+    margin-bottom: 20px;
 
     &__image {
         // usable, but not great ratios
@@ -117,4 +125,16 @@ footer {
         margin-right: 0;
     }
 
+}
+
+
+.tag-container {
+    margin-bottom: 20px;
+}
+
+.tag {
+    padding: 5px;
+    background: var(--nice-pink);
+    border-radius: 10px;
+    color: black;
 }
