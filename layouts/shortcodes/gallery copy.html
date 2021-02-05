@@ -1,0 +1,10 @@
+<div class="gallery">
+    <!-- Provide X number of images, with parameters for resizing? -->
+    {{ with .Get "source"}}
+        {{ range . }}
+            {{ $img := resources.Get .src }} 
+            {{ $resized := $img.Resize "100x200" }}
+            {{ $images := resources.Get . }} 
+        {{end}}
+    {{end}}
+</div>

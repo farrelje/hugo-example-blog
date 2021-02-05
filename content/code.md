@@ -24,3 +24,5 @@ Shortcodes are essentially plugins for Hugo. Custom shortcodes need to be create
 ### Examples - built-in shortcodes
 
 {{< figure src="/bhut.jpg" title="Crazy hot chillies" >}}
+
+{{< gallery source=".Site.Data.images" >}}
