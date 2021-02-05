@@ -25,4 +25,16 @@ Shortcodes are essentially plugins for Hugo. Custom shortcodes need to be create
 
 {{< figure src="/bhut.jpg" title="Crazy hot chillies" >}}
 
-{{< gallery source=".Site.Data.images" >}}
+
+### Custom example:
+
+Probably not greatly useful (hardcoded `images.yml` in the shortcode; more work than just recreating a gallery in HTML), but a fun demonstration:
+
+- Unprocessed images are in a `resources` folder called `desert_gallery`
+- Because we also want to add alt tags, we've got the paths and the alt text in a data file
+- To get this data, we provide gallery with the collection name inside `images.yml` to search for
+- Optionally, we can provide dimensions for resizing.
+
+Ultimately, not very useful, but hey.
+
+{{< gallery source="desert" dimensions="600x400" >}}

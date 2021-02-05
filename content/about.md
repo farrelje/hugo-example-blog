@@ -5,3 +5,5 @@ draft: true
 ---
 
 An about page. Hooray.
+
+{{< gallery source="desert" dimensions="600x400" >}}

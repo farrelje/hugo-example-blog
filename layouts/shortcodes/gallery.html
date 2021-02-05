@@ -1,8 +1,18 @@
 <div class="gallery">
-    <!-- Provide X number of images, with parameters for resizing? -->
+    <!-- Provide X number of images, with parameters for resizing -->
 
+        {{  $data := .Get "source" }}
 
-    {{ range .Site.Data.images }}
-    {{ .}}
-    {{ end}}
+        {{ range (index .Site.Data.images $data) }}
+
+            {{ $img := resources.Get .src }}
+            {{ if $.Get "dimensions" }}
+                {{ $resized := $img.Resize ($.Get "dimensions") }}
+                <img class="gallery__image" src="{{$resized.Permalink}}" alt="{{.alt}}">
+            {{else}}
+                <img class="gallery__image" src="{{$img.Permalink}}" alt="{{.alt}}">
+            {{end}}
+
+        {{end}}
+
 </div>
