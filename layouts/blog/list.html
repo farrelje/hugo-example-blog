@@ -1,7 +1,7 @@
 {{ define "main" }}
 <!-- Need to wrap content in a block-level element -->
     <div class="container">
-        <h1 class="page-title">All posts - list.html convention</h1>
+        <h1 class="page-title">{{ .Title }}</h1>
         <ul class="post-list">
             {{ range .Pages.ByPublishDate.Reverse }}
             <li>

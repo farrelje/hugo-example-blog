@@ -3,7 +3,7 @@ title: "A third post"
 date: 2021-02-03T13:59:21+13:00
 draft: true
 tags: ["Third"]
-category: ""
+category: "Code"
 resources:
 - src: "./images/hugo-rose.jpg"
   alt:  "A rose that somehow has something to do with Victor Hugo"
